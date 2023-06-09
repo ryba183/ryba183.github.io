@@ -84,23 +84,26 @@
 				<!-- Four -->
 				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 					<div class="content">
-					<h2>Modeling Collision-Coalescence in Particle Microphysics</h2>
-					<p style="text-align: justify;">A fundamental component of the Super-Droplet Method is the All Or Nothing (AON) algorithm, which governs the behavior of SDs following collisions between two SDs. The AON algorithm ensures mass conservation during these collision events. Let's consider two SDs, SD₁ and SD₂, with respective properties of radius (r₁ and r₂) and multiplicity (ζ₁ and ζ₂). When ζ₁ exceeds ζ₂, the post-collision properties of SD₁ and SD₂ can be described as follows: ζ₁ decreases by ζ₂, while r₁ remains unchanged. In the case of SD₂, ζ₂ remains unchanged, but r₂ increases in accordance with mass conservation. To calculate the resulting radius, we sum up the cubed radii of r₁ and r₂ and then take the cubic root.</p>
-					<ul class="actions stacked">
-						<li>
-						<a href="#text_cc" class="button" onclick="toggleVisibility('text_cc'); return false;">Details</a>
-						</li>
-					</ul>
+						<h2>Modeling Collision-Coalescence in Particle Microphysics</h2>
+						<p style="text-align: justify;">A fundamental component of the Super-Droplet Method is the All Or Nothing (AON) algorithm, which governs the behavior of SDs following collisions between two SDs. The AON algorithm ensures mass conservation during these collision events. Let's consider two SDs, SD₁ and SD₂, with respective properties of radius (r₁ and r₂) and multiplicity (ζ₁ and ζ₂). When ζ₁ exceeds ζ₂, the post-collision properties of SD₁ and SD₂ can be described as follows: ζ₁ decreases by ζ₂, while r₁ remains unchanged. In the case of SD₂, ζ₂ remains unchanged, but r₂ increases in accordance with mass conservation. To calculate the resulting radius, we sum up the cubed radii of r₁ and r₂ and then take the cubic root.</p>
+						<p> Treatment of a collection between two SIPs in the all-ornothing (AON) algorithm, partially adopted from Fig. 2 of Unterstrasser et al. (2017).</p>
+						<ul class="actions stacked">
+							<li>
+								<a href="#text_cc" class="button" onclick="toggleVisibility('text_cc'); return false;">Details</a>
+							</li>
+						</ul>
 					</div>
+					<!-- <div class="image" style="text-align: center; background-color: white; display: flex; align-items: center; justify-content: center;"> -->
 					<div class="image">
-					<img src="images/AON.png" alt="" />
+							<!-- <img src="images/AON.png" alt="" style="max-width: 750px; height: auto;" /> -->
+						<img src="images/AON_u.png" alt="" />
 					</div>
-				</section>
+				</section>		
 				<section id="text_cc" style="display: none;">
 					<div class="content">
 						<div class="box">
 							<p style="text-align: justify;">In this description, we assume that the probability of collision between a pair of particles is known, and it is proportional to the coalescence kernel. The All Or Nothing (AON) algorithm is designed to accurately predict the expected number of collisions while keeping the number of super-droplets (SDs) constant. However, a drawback of the AON algorithm is that it introduces a larger variance in the number of collisions compared to the real variance. Initially, AON was developed to mimic the real phenomena of droplet collision-coalescence events, enabling one-to-one simulations where each SD represents a single real droplet. Unfortunately, the computational requirements for such simulations exceed the capabilities of currently available HPC. This is the reason why the initialization method for SDs plays a critical role in the simulation results. Various initialization algorithms exist, but they can be categorized into two groups. The first group ensures that all SDs have the same multiplicity, and their radii are randomly chosen based on the cumulative distribution function (CDF). In the second method, we specify the desired number of SDs within the grid box and randomly assign radii based on a bimodal lognormal distribution, which determines the multiplicity of each SD.
-								In my research, I conducted sensitivity tests on the All Or Nothing (AON) algorithm within the context of an isolated Cumulus Congestus Cloud, following the setup described by <a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1256/qj.03.199">Lasher-Trap et al. (2005)</a> setup.. Specifically, I investigated the impact of the number of SDs per grid box, SD initialization method, and coalescence substep on the behavior of the AON algorithm. Additionally, to advance my research further, I examined the behavior of the AON algorithm under varying precipitation conditions, including scenarios with minimal rainfall ('LR'), moderate rainfall ('MR'), and heavy precipitation ('HR'). Throughout these simulations, the velocity field remained consistent across all scenarios, with differences only in the microphysics aspects of the simulations. As part of the investigation, I also conducted fully dynamical simulations for reference. One of my main goals was to analyze how the random seed set for the AON algorithm influences the spread of the obtained results.<\p>					
+								In my research, I conducted sensitivity tests on the All Or Nothing (AON) algorithm within the context of an isolated Cumulus Congestus Cloud, following the setup described by <a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1256/qj.03.199">Lasher-Trap et al. (2005)</a> setup. Specifically, I investigated the impact of the number of SDs per grid box, SD initialization method, and coalescence substep on the behavior of the AON algorithm. Additionally, to advance my research further, I examined the behavior of the AON algorithm under varying precipitation conditions, including scenarios with minimal rainfall ('LR'), moderate rainfall ('MR'), and heavy precipitation ('HR'). Throughout these simulations, the velocity field remained consistent across all scenarios, with differences only in the microphysics aspects of the simulations. As part of the investigation, I also conducted fully dynamical simulations for reference. One of my main goals was to analyze how the random seed set for the AON algorithm influences the spread of the obtained results.</p>					
 						</div>
 					</div>
 				</section>
