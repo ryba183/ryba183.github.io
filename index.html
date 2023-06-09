@@ -21,7 +21,8 @@
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>International HPC Summer School 2023, Atlanta, USA </h1>
-							<h2>Electronic poster session </h2>
+							<img src="images/qr.png" alt="QR Code" style="max-width: 100px; vertical-align: middle; margin-top: 20px; margin-right: 10px;" />
+							<h2 style="display: inline;">Electronic poster session</h2>
 							<p class="major">My name is <a href="https://www.igf.fuw.edu.pl/en/users/Piotr_Zmijewski/">Piotr Zmijewski</a> and I am a PhD student at the Institute of Geophysics, 						 Physics Department, University of Warsaw. Currently, I am a member of the <a href="https://www.igf.fuw.edu.pl/en/projects/research-groups/mikrofizyka-chmur/">Microphysics of Clouds Group</a>.</p>
 							<!-- <ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
@@ -40,7 +41,7 @@
 
 								However, a challenge in warm rain formation is the size gap problem. It refers to the difficulty of explaining the rapid growth of tiny cloud droplets into raindrops through collision alone, as the efficiency of collisions decreases with increasing droplet sizes.
 								Simulating the collision between cloud droplets is a complex task due to various factors involved. It requires considering droplet properties such as size, velocity, and concentration, as well as environmental factors like turbulence and electric charges. Achieving accurate modeling and simulation of the collision process is challenging due to factors such as droplet concentration, size distribution, and ambient conditions.</p>
-							<p>Graphic taken from the lecture given by Prof.<a href="https://www.igf.fuw.edu.pl/pl/users/hanna-pawlowska/">Hanna Pawłowska</a></p>
+							<p>Graphic taken from the lecture given by Prof. <a href="https://www.igf.fuw.edu.pl/pl/users/hanna-pawlowska/">Hanna Pawłowska</a></p>
 								<!-- Understanding cloud microphysics and the challenges in simulating cloud droplet collisions contributes to improving our knowledge of precipitation formation, weather forecasting, and climate modeling. Ongoing research aims to develop advanced techniques and refine existing models to gain insights into the complexities of cloud microphysics and enhance our understanding and prediction of precipitation processes.</p> -->
 							<ul class="actions stacked">
 								<li><a href="https://journals.ametsoc.org/view/journals/bams/100/4/bams-d-18-0005.1.xml?tab_body=pdf" class="button">Learn More</a></li>
@@ -52,33 +53,32 @@
 					</section>
 
 				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-						<h2><a href="https://github.com/igfuw/UWLCM">University of Warsaw Lagrangian Cloud Model</a></h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p> -->
-						<div>
-							<!-- <h3>Additional Features:</h3> -->
-							<ul>
-							<li>Anelistic Large Eddy Simulation (LES);</li>
-							<li>1D, 2D or 3D simulations;</li>
-							<li>The Multidimensional Positive-Definite Advection Transport Algorithm (<a href="https://onlinelibrary.wiley.com/doi/10.1002/fld.1071">MPDATA</a>) is used to model transport of Eulerian variables;</li>
-							<li>SGS turbulence modeled with Smagorinsky scheme or implicit LES;</li>
-							<li>Models for sub-grid scale (SGS) motion, condensation, and coalescence of Super-Droplets;</li>
-							<li>Super-Droplet Method (<a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/qj.441">SDM</a>):</li>
-							<ul>
-								<li>The Super-Droplets (SD) are computational objects used in Lagrangian particle-based microphysics methods;</li>
-								<li>Each SD represents a large number of identical real particles. SD are described by its: position, dry and/or wet radius and multiplicity;</li>
-								<li>Super-Droplets microphysics can be calculated using GPUs;</li>
-							</ul>
-							</ul>
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+					<h2><a href="https://github.com/igfuw/UWLCM">University of Warsaw Lagrangian Cloud Model</a></h2>
+					<div>
+					<ul>
+						<li>Anelistic Large Eddy Simulation (LES);</li>
+						<li>1D, 2D or 3D simulations;</li>
+						<li>The Multidimensional Positive-Definite Advection Transport Algorithm (<a href="https://onlinelibrary.wiley.com/doi/10.1002/fld.1071">MPDATA</a>) is used to model transport of Eulerian variables;</li>
+						<li>SGS turbulence modeled with Smagorinsky scheme or implicit LES;</li>
+						<li>Models for sub-grid scale (SGS) motion, condensation, and coalescence of Super-Droplets;</li>
+						<li>Super-Droplet Method (<a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/qj.441">SDM</a>):</li>
+						<ul>
+							<li>The Super-Droplets (SD) are computational objects used in Lagrangian particle-based microphysics methods;</li>
+							<li>Each SD represents a large number of identical real particles. SD are described by its: position, dry and/or wet radius and multiplicity;</li>
+							<li>Super-Droplets microphysics can be calculated using GPUs;</li>
+						</ul>
+						</ul>
 						</div>
-						<p>A more detailed description of UWLCM can be found in <a href="https://gmd.copernicus.org/articles/12/2587/2019/">Dziekan et al.(2019)</a> and <a href="https://gmd.copernicus.org/articles/15/4489/2022/">Dziekan and Zmijewski (2022)</a>. Graphic obtained by P. Dziekan in <a href="https://www.paraview.org/">ParaView</a> from results of UWCLM </p>
-						
+						  <p>A more detailed description of UWLCM can be found in <a href="https://gmd.copernicus.org/articles/12/2587/2019/">Dziekan et al.(2019)</a> and <a href="https://gmd.copernicus.org/articles/15/4489/2022/">Dziekan and Zmijewski (2022)</a>. Graphic obtained by P. Dziekan in <a href="https://www.paraview.org/">ParaView</a> from results of UWCLM.</p>
 						</div>
 						<div class="image">
 						<img src="images/Lasher_cumulus_along_y.png" alt="" />
-						</div>
-					</section>
+					</div>
+				</section>
+					  
+  
   
 
 				<!-- Four -->
@@ -98,10 +98,10 @@
 				</section>
 				<section id="text_cc" style="display: none;">
 					<div class="content">
-					<div class="box">
-						<p style="text-align: justify;">A fundamental component of the Super-Droplet Method is the All Or Nothing (AON) algorithm, which governs the behavior of SDs following collisions between two SDs. The AON algorithm ensures mass conservation during these collision events. Let's consider two SDs, SD₁ and SD₂, with respective properties of radius (r₁ and r₂) and multiplicity (ζ₁ and ζ₂). When ζ₁ exceeds ζ₂, the post-collision properties of SD₁ and SD₂ can be described as follows: ζ₁ decreases by ζ₂, while r₁ remains unchanged. In the case of SD₂, ζ₂ remains unchanged, but r₂ increases in accordance with mass conservation. To calculate the resulting radius, we sum up the cubed radii of r₁ and r₂ and then take the cubic root.
-						In my research, I conducted sensitivity tests on the All Or Nothing algorithm within the context of Cumulus Congestus Cloud, drawing from the Lasher-Trap et al. (2005) setup. Specifically, I investigated the influence of the number of SDs per grid box, SD initialization method, and coalescence substep on the behavior of the AON algorithm. Additionally, to further advance my research, I explored the behavior of the AON algorithm under varying precipitation conditions, including scenarios with minimal rainfall ('LR'), moderate rainfall ('MR'), and heavy precipitation ('HR'). In these simulations, the velocity field remains consistent across all scenarios, with differences only in the microphysics aspects of the simulations.</p>
-					</div>
+						<div class="box">
+							<p style="text-align: justify;">In this description, we assume that the probability of collision between a pair of particles is known, and it is proportional to the coalescence kernel. The All Or Nothing (AON) algorithm is designed to accurately predict the expected number of collisions while keeping the number of super-droplets (SDs) constant. However, a drawback of the AON algorithm is that it introduces a larger variance in the number of collisions compared to the real variance. Initially, AON was developed to mimic the real phenomena of droplet collision-coalescence events, enabling one-to-one simulations where each SD represents a single real droplet. Unfortunately, the computational requirements for such simulations exceed the capabilities of currently available HPC. This is the reason why the initialization method for SDs plays a critical role in the simulation results. Various initialization algorithms exist, but they can be categorized into two groups. The first group ensures that all SDs have the same multiplicity, and their radii are randomly chosen based on the cumulative distribution function (CDF). In the second method, we specify the desired number of SDs within the grid box and randomly assign radii based on a bimodal lognormal distribution, which determines the multiplicity of each SD.
+								In my research, I conducted sensitivity tests on the All Or Nothing (AON) algorithm within the context of an isolated Cumulus Congestus Cloud, following the setup described by <a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1256/qj.03.199">Lasher-Trap et al. (2005)</a> setup.. Specifically, I investigated the impact of the number of SDs per grid box, SD initialization method, and coalescence substep on the behavior of the AON algorithm. Additionally, to advance my research further, I examined the behavior of the AON algorithm under varying precipitation conditions, including scenarios with minimal rainfall ('LR'), moderate rainfall ('MR'), and heavy precipitation ('HR'). Throughout these simulations, the velocity field remained consistent across all scenarios, with differences only in the microphysics aspects of the simulations. As part of the investigation, I also conducted fully dynamical simulations for reference. One of my main goals was to analyze how the random seed set for the AON algorithm influences the spread of the obtained results.<\p>					
+						</div>
 					</div>
 				</section>
 				
