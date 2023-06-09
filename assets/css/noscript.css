@@ -385,3 +385,21 @@
 	.banner.onscroll-image-fade-in.is-inactive .image img {
 		opacity: 1;
 	}
+
+	.button-wrapper {
+		display: flex;
+	}
+	  
+	.button-wrapper .actions {
+		display: flex;
+		gap: 10px;
+	}
+
+	.hide {
+		display: none;
+	  }
+	  
+	  #additional-content.expanded {
+		display: block;
+	  }
+	  

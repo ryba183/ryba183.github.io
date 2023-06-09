@@ -149,7 +149,15 @@
 			})
 			.children()
 				.wrapInner('<div class="inner"></div>');
-
+	// Hide
+		function toggleContent() {
+			var content = document.getElementById("expandable-content");
+			if (content.style.display === "none") {
+		  		content.style.display = "block";
+			} else {
+		  		content.style.display = "none";
+			}
+	  	}
 	// Gallery.
 		$('.gallery')
 			.wrapInner('<div class="inner"></div>')
