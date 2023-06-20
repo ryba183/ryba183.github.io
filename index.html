@@ -23,7 +23,8 @@
 							<h2>Modeling collision-coalescence in particle microphysics: numerical convergence of mean and variance of precipitation in cloud simulations</h2>
 							<h3>International HPC Summer School 2023, Atlanta, USA </h3>
 							<!-- <h2 style="display: inline;">Electronic poster session</h2> -->
-							<p class="major">My name is <a href="https://www.igf.fuw.edu.pl/en/users/Piotr_Zmijewski/">Piotr Zmijewski</a> and I am a PhD student at the Institute of Geophysics, 						 Physics Department, University of Warsaw. Currently, I am a member of the <a href="https://www.igf.fuw.edu.pl/en/projects/research-groups/mikrofizyka-chmur/">Microphysics of Clouds Group</a>.</p>
+							<p class="major">My name is <a href="https://www.igf.fuw.edu.pl/en/users/Piotr_Zmijewski/">Piotr Zmijewski</a> and I am a PhD student at the Institute of Geophysics,
+								 Physics Department, University of Warsaw. Currently, I am a member of the <a href="https://www.igf.fuw.edu.pl/en/projects/research-groups/mikrofizyka-chmur/">Microphysics of Clouds Research Group</a>.</p>
 							<!-- <ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
 							</ul> -->
@@ -38,11 +39,16 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>Cloud Microphysics</h2>
-							<p style="text-align: justify;">Cloud microphysics is a field that studies the processes occurring within clouds, particularly the formation and evolution of cloud droplets. Warm rain creation is a key aspect of cloud microphysics, where droplets grow through collision and coalescence to form precipitation without the involvement of ice particles.
-
-								However, a challenge in warm rain formation is the size gap problem. It refers to the difficulty of explaining the rapid growth of tiny cloud droplets into raindrops through collision alone, as the efficiency of collisions decreases with increasing droplet sizes.
-								Simulating the collision between cloud droplets is a complex task due to various factors involved. It requires considering droplet properties such as size, velocity, and concentration, as well as environmental factors like turbulence and electric charges. Achieving accurate modeling and simulation of the collision process is challenging due to factors such as droplet concentration, size distribution, and ambient conditions.</p>
-							<p>Graphic taken from the lecture given by Prof. <a href="https://www.igf.fuw.edu.pl/pl/users/hanna-pawlowska/">Hanna Pawłowska</a></p>
+							<p style="text-align: justify;">Cloud microphysics is a field of studies of processes occurring at microscales, particularly formation and evolution of cloud particles.
+								In warm clouds (i.e. void of ice) describing rain formation is still a challenge.
+								Droplets particles first grow by condensation, which efficiency diminishes strongly with increasing droplet size.
+								Raindrops are formed when droplets are big enough to collide and coalesce, thus increasing their size rapidly.
+								However, there is the range of sizes where neither condensational nor collision-coalescence growth rate is big enough.
+								This so-called ‘gap-size’ problem is the major challenge in simulating clouds.				 
+								Simulating collisions between cloud droplets is a complex task due to various factors involved.
+								 It requires considering droplet properties such as size, velocity, concentration, as well as environmental factors like turbulence. 
+								</p>
+							<!-- <p>Graphic taken from the lecture given by Prof. <a href="https://www.igf.fuw.edu.pl/pl/users/hanna-pawlowska/">Hanna Pawłowska</a></p> -->
 								<!-- Understanding cloud microphysics and the challenges in simulating cloud droplet collisions contributes to improving our knowledge of precipitation formation, weather forecasting, and climate modeling. Ongoing research aims to develop advanced techniques and refine existing models to gain insights into the complexities of cloud microphysics and enhance our understanding and prediction of precipitation processes.</p> -->
 							<ul class="actions stacked">
 								<li><a href="https://journals.ametsoc.org/view/journals/bams/100/4/bams-d-18-0005.1.xml?tab_body=pdf" class="button">Learn More</a></li>
@@ -56,23 +62,23 @@
 				<!-- Three -->
 				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 					<div class="content">
-					<h2><a href="https://github.com/igfuw/UWLCM">University of Warsaw Lagrangian Cloud Model</a></h2>
+					<h2><a href="https://github.com/igfuw/UWLCM">University of Warsaw Lagrangian Cloud Model (UWLCM)</a></h2>
 					<div>
 					<ul>
 						<li>Anelistic Large Eddy Simulation (LES);</li>
-						<li>1D, 2D or 3D simulations;</li>
-						<li>The Multidimensional Positive-Definite Advection Transport Algorithm (<a href="https://onlinelibrary.wiley.com/doi/10.1002/fld.1071">MPDATA</a>) is used to model transport of Eulerian variables;</li>
+						<li>2D or 3D simulations;</li>
+						<li>The Multidimensional Positive-Definite Advection Transport Algorithm (<a href="https://onlinelibrary.wiley.com/doi/10.1002/fld.1071">MPDATA</a>) used to model transport of Eulerian variables;</li>
 						<li>SGS turbulence modeled with Smagorinsky scheme or implicit LES;</li>
-						<li>Models for sub-grid scale (SGS) motion, condensation, and coalescence of Super-Droplets;</li>
+						<li>Models for sub-grid scale (SGS) motion;</li>
 						<li>Super-Droplet Method (<a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/qj.441">SDM</a>):</li>
 						<ul>
 							<li>The Super-Droplets (SD) are computational objects used in Lagrangian particle-based microphysics methods;</li>
-							<li>Each SD represents a large number of identical real particles. SD are described by its: position, dry and/or wet radius and multiplicity;</li>
+							<li>Each SD represents a large number of identical real particles. SDs are described by their attributes: position, dry or wet radius and multiplicity;</li>
 							<li>Super-Droplets microphysics can be calculated using GPUs;</li>
 						</ul>
 						</ul>
 						</div>
-						  <p>A more detailed description of UWLCM can be found in <a href="https://gmd.copernicus.org/articles/12/2587/2019/">Dziekan et al.(2019)</a> and <a href="https://gmd.copernicus.org/articles/15/4489/2022/">Dziekan and Zmijewski (2022)</a>. Graphic obtained by P. Dziekan in <a href="https://www.paraview.org/">ParaView</a> from results of UWCLM.</p>
+						  <p>A more detailed description of UWLCM can be found in <a href="https://gmd.copernicus.org/articles/12/2587/2019/">Dziekan et al.(2019)</a> and <a href="https://gmd.copernicus.org/articles/15/4489/2022/">Dziekan and Zmijewski (2022)</a>. Figure obtained by P. Dziekan in <a href="https://www.paraview.org/">ParaView</a> from results of UWCLM.</p>
 						</div>
 						<div class="image">
 						<img src="images/Lasher_cumulus_along_y.png" alt="" />
@@ -86,7 +92,11 @@
 				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 					<div class="content">
 						<h2>Modeling Collision-Coalescence in Particle Microphysics</h2>
-						<p style="text-align: justify;">A fundamental component of the Super-Droplet Method is the All Or Nothing (AON) algorithm, which governs the behavior of SDs following collisions between two SDs. The AON algorithm ensures mass conservation during these collision events. Let's consider two SDs, SD₁ and SD₂, with respective properties of radius (r₁ and r₂) and multiplicity (ζ₁ and ζ₂). When ζ₁ exceeds ζ₂, the post-collision properties of SD₁ and SD₂ can be described as follows: ζ₁ decreases by ζ₂, while r₁ remains unchanged. In the case of SD₂, ζ₂ remains unchanged, but r₂ increases in accordance with mass conservation. To calculate the resulting radius, we sum up the cubed radii of r₁ and r₂ and then take the cubic root.</p>
+						<p style="text-align: justify;">
+							A fundamental component of the Super-Droplet Method is the All Or Nothing (AON) algorithm, which determines attributes of SDs following collisions between two SDs.
+							The AON algorithm ensures mass conservation during collision events. Let's consider two Super-Droplets, SD₁ and SD₂, with respective radii (r₁ and r₂) and multiplicities (ζ₁ and ζ₂).
+							If ζ₂ exceeds ζ₁, the post-collision properties of SD₁ and SD₂ are described as follows: ζ₂ decreases by ζ₁, while r₂ remains unchanged.
+							In the case of SD₁, ζ₁ remains unchanged, but r₁ increases in accordance with mass conservation i.e. r<sub>1</sub><sup>new</sup> = (r<sub>1</sub><sup>3</sup> + r<sub>2</sub><sup>3</sup>)<sup>1/3</sup>.</p>
 						<ul class="actions stacked">
 							<li>
 								<a href="#text_cc" class="button" onclick="toggleVisibility('text_cc'); return false;">Details</a>
@@ -102,8 +112,22 @@
 				<section id="text_cc" style="display: none;">
 					<div class="content">
 						<div class="box">
-							<p style="text-align: justify;">In this description, we assume that the probability of collision between a pair of particles is known, and it is proportional to the coalescence kernel. The All Or Nothing (AON) algorithm is designed to accurately predict the expected number of collisions while keeping the number of super-droplets (SDs) constant. However, a drawback of the AON algorithm is that it introduces a larger variance in the number of collisions compared to the real variance. Initially, AON was developed to mimic the real phenomena of droplet collision-coalescence events, enabling one-to-one simulations where each SD represents a single real droplet. Unfortunately, the computational requirements for such simulations exceed the capabilities of currently available HPC. This is the reason why the initialization method for SDs plays a critical role in the simulation results. Various initialization algorithms exist, but they can be categorized into two groups. The first group ensures that all SDs have the same multiplicity, and their radii are randomly chosen based on the cumulative distribution function (CDF). In the second method, we specify the desired number of SDs within the grid box and randomly assign radii based on a bimodal lognormal distribution, which determines the multiplicity of each SD.
-								In my research, I conducted sensitivity tests on the All Or Nothing (AON) algorithm within the context of an isolated Cumulus Congestus Cloud, following the setup described by <a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1256/qj.03.199">Lasher-Trap et al. (2005)</a> setup. Specifically, I investigated the impact of the number of SDs per grid box, SD initialization method, and coalescence substep on the behavior of the AON algorithm. Additionally, to advance my research further, I examined the behavior of the AON algorithm under varying precipitation conditions, including scenarios with minimal rainfall ('LR'), moderate rainfall ('MR'), and heavy precipitation ('HR'). Throughout these simulations, the velocity field remained consistent across all scenarios, with differences only in the microphysics aspects of the simulations. As part of the investigation, I also conducted fully dynamical simulations for reference. One of my main goals was to analyze how the random seed set for the AON algorithm influences the spread of the obtained results.</p>					
+							<p style="text-align: justify;">
+								In this description, we assume that the probability of collision between a pair of particles is known, and it is proportional to the coalescence kernel.
+								The All Or Nothing (AON) algorithm is designed to accurately predict the expected number of collisions while keeping the number of super-droplets (SDs) constant.
+								However, a drawback of the AON algorithm is that it introduces a larger variance in the number of collisions compared to the real variance.
+								Initially, AON was developed to mimic the real phenomena of droplet collision-coalescence events, enabling one-to-one simulations where each SD represents a single real droplet.
+								Unfortunately, the computational requirements for one-to-one simulations exceed the capabilities of currently available HPC.
+								Therefore, the initialization method for SDs, which represents many real droplets, plays an important role in simulations.
+								Various initialization algorithms exist, and they can be categorized into two groups.
+								The first group ensures that all SDs have the same multiplicity, and their radii are randomly chosen based on the cumulative distribution function (CDF).
+								In the second method, we specify the desired number of SDs within the grid box and randomly assign radii based on any distribution, which determines the multiplicity of each SD.
+								In my research, I performed sensitivity tests on the All Or Nothing (AON) algorithm within the context of an isolated Cumulus Congestus Cloud, following the setup described by <a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1256/qj.03.199">Lasher-Trap et al. (2005)</a>.
+								Specifically, I examined the impact of the number of SDs per grid box, SD initialization method, and coalescence substep on the behavior of the AON algorithm.
+								Additionally, to advance my research further, I examined the behavior of the AON algorithm under varying precipitation conditions, including scenarios with minimal rainfall ('LR'), moderate rainfall ('MR'), and heavy precipitation ('HR').
+								Throughout these simulations, the velocity field remained consistent across all scenarios, with differences only in the microphysics aspects of the simulations.
+								As part of the investigation, I also performed fully dynamical simulations.
+								One of the main objectives of this research was to analyze how the random perturbation in the AON algorithm influences the spread of the obtained results.</p>
 						</div>
 					</div>
 				</section>
@@ -124,16 +148,22 @@
 				<!-- Five -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>Connection with the High Performance Computing</h2>
-							<p style="text-align: justify;">Using the UWLCM for research requires significant computational power, typically in the form of heterogeneous clusters consisting of CPUs and GPUs. These resources are essential for handling the complex calculations and simulations involved in weather and climate modeling.
-
-								Throughout my research, I had the opportunity to utilize various computing resources to support my work. I made use of the resources provided by <a href="https://kdm.icm.edu.pl/" target="_blank">ICM</a> (Interdisciplinary Centre for Mathematical and Computational Modelling) at the University of Warsaw. 
-								Additionally, I benefited from the computational capabilities offered by <a href="https://www.cyfronet.pl/en/4421,main.html" target="_blank">Cyfronet</a>, the Academic Computer Centre located in Poland. Their resources greatly contributed to the successful execution of my simulations and data analysis.
-								Furthermore, I had the opportunity to collaborate with the Hyogo Supercomputer Center, located at the University of Hyogo in Japan. During my 2.5-month internship, I had the privilege of utilizing their high-performance computing facilities to conduct advanced calculations and simulations.
-								Throughout my internship, I extensively worked with the <a href="https://scale.riken.jp/" target="_blank">https://scale.riken.jp/>SCALE-SDM</a> (Scalable Computing for Advanced Library and Environment for Simulation and Data-driven Decision Making) model developed by RIKEN.
-								Lastly, I had the privilege of exploring the capabilities of the Fugaku supercomputer, developed by RIKEN and located in Japan. The cutting-edge technology offered by Fugaku allowed me to push the boundaries of my research and obtain valuable insights.
-								
-								Below, you can find a glimpse of some of the noteworthy results obtained through my research efforts. These findings highlight the impact and potential of utilizing powerful computing resources in advancing our understanding of weather and climate phenomena.</p>
+							<h2>High Performance Computing</h2>
+							<p style="text-align: justify;">
+								Using the UWLCM for research requires significant computational power, typically in the form of heterogeneous clusters consisting of CPUs and GPUs.
+								These resources are essential for handling the complex calculations and simulations involved in my field.
+								Throughout my research, I had the opportunity to make use of various computing resources.
+								I made use of the resources provided by the <a href="https://kdm.icm.edu.pl/" target="_blank">ICM</a> (Interdisciplinary Centre for Mathematical and Computational Modelling) at the University of Warsaw.
+								Additionally, I benefited from the computational capabilities offered by <a href="https://www.cyfronet.pl/en/4421,main.html" target="_blank">Cyfronet</a>, the Academic Computer Centre located in Poland.
+								Their resources greatly contributed to the successful execution of my simulations and data analysis.
+								Furthermore, I had the opportunity to work at the Hyogo Supercomputer Center, located at the University of Hyogo in Japan.
+								During my 3-month internship, I had the privilege of utilizing their high-performance computing facilities to carry out advanced calculations and simulations.
+								Throughout my internship, I extensively worked with the <a href="https://scale.riken.jp/" target="_blank">SCALE-SDM</a> (Scalable Computing for Advanced Library and Environment for Simulation and Data-driven Decision Making) model developed by RIKEN.
+								Lastly, I had the privilege of exploring the capabilities of the Fugaku supercomputer, developed by RIKEN and located in Japan.
+								The cutting-edge technology offered by Fugaku enabled me to push the boundaries of my research and gain valuable insights.
+															
+								Below, you can find a glimpse of some of the noteworthy results obtained through my research.
+								These findings highlight the impact and potential of utilizing powerful computing resources in advancing our understanding of weather and climate phenomena.</p>
 						</div>
 
 						<!-- Gallery -->
